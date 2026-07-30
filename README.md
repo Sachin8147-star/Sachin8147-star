@@ -37,9 +37,10 @@
 | [Resume / Portfolio Site](https://github.com/Sachin8147-star/Resume_Portfolio_website) | Personal portfolio and resume, built for the web | HTML, CSS |
 
 # 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=sachin8147-star&theme=radical&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=sachin8147-star&theme=radical&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=sachin8147-star&theme=radical&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Sachin8147-star/Sachin8147-star/output/github-stats.svg" alt="Sachin's GitHub Stats" width="48%" />
+  <img src="https://raw.githubusercontent.com/Sachin8147-star/Sachin8147-star/output/github-top-langs.svg" alt="Most Used Languages" width="48%" />
+</p>
 
 ### Daily Contribution Snake
 
