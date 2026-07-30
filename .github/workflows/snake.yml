@@ -1,5 +1,5 @@
-name: Generate GitHub Snake & Stats
- 
+name: Generate GitHub Snake
+
 on:
   schedule:
     - cron: "0 0 * * *"    # runs daily at 00:00 UTC
@@ -7,17 +7,14 @@ on:
   push:
     branches:
       - main
- 
+
 permissions:
   contents: write
- 
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
- 
       - name: Generate snake animation
         uses: Platane/snk@v3
         id: snake-gif
@@ -26,24 +23,8 @@ jobs:
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
- 
-      - name: Generate stats card
-        uses: soulteary/github-readme-stats-action@v1.0.0
-        with:
-          card: stats
-          options: 'username=${{ github.repository_owner }}&show_icons=true&theme=tokyonight&hide_border=true'
-          path: dist/github-stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
- 
-      - name: Generate top languages card
-        uses: soulteary/github-readme-stats-action@v1.0.0
-        with:
-          card: top-langs
-          options: 'username=${{ github.repository_owner }}&layout=compact&theme=tokyonight&hide_border=true'
-          path: dist/github-top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
- 
-      - name: Push generated files to output branch
+
+      - name: Push snake animation to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
